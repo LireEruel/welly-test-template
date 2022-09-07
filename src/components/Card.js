@@ -3,7 +3,6 @@ import React, { useState, useContext } from "react";
 import styled from "styled-components";
 
 const Card = ({ url, title, content, name }) => {
-  console.log(url);
   return (
     <Container>
       <ImgWrap>
