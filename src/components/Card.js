@@ -12,12 +12,9 @@ const Card = ({ url, title, content, name }) => {
 
       <Content>
         <Title>{title}</Title>
-        <Disciption>
-          일방적으로 보고 따라하는 수업이 아니라 선생님과 라이브로 진행이 되어서
-          내 자세도 실시간으로 꼼꼼하게 지도해주신다 😗
-        </Disciption>
+        <Disciption>{content}</Disciption>
         <Bottom>
-          <BottomText>a7***님</BottomText>
+          <BottomText>{name}님</BottomText>
           <BottomText>게시물로 이동 &gt;</BottomText>
         </Bottom>
       </Content>
@@ -49,10 +46,16 @@ const Title = styled.div`
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 const Disciption = styled.div`
   font-size: 10px;
   font-weight: bold;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 const Bottom = styled.div`
   display: flex;

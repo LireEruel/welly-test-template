@@ -8,7 +8,6 @@ import dummy_set from "../../assets/data_set"
 const TestPage = () => {
   const testStore = useContext(TestContext);
   const [emblaRef] = useEmblaCarousel();
-  console.log(dummy_set)
   return (
     <Container>
             <Title>요가 후기</Title>
