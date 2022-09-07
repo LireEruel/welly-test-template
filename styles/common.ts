@@ -1342,4 +1342,13 @@ export const common = css`
     -webkit-box-orient: vertical;
     box-sizing:border-box;
   } 
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 80%;
+  }
 `;

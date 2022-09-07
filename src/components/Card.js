@@ -2,18 +2,16 @@ import React, { useState, useContext } from "react";
 ``;
 import styled from "styled-components";
 
-const Card = () => {
+const Card = ({ url, title, content, name }) => {
+  console.log(url);
   return (
     <Container>
       <ImgWrap>
-        <img
-          className="w-full"
-          src="https://dl.airtable.com/.attachments/67220faacf3d7afb76472796f777620a/fbbd1d71/268430234_121156030391554_1682367944982305369_n.jpg"
-        ></img>
+        <img className="w-full" src={url}></img>
       </ImgWrap>
 
       <Content>
-        <Title>아가들 낮잠 잘 때 홈요가 😊</Title>
+        <Title>{title}</Title>
         <Disciption>
           일방적으로 보고 따라하는 수업이 아니라 선생님과 라이브로 진행이 되어서
           내 자세도 실시간으로 꼼꼼하게 지도해주신다 😗

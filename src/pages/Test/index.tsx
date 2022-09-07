@@ -3,16 +3,31 @@ import styled from "styled-components";
 import Fonts from "styles/fonts";
 import TestContext from "stores/TestStore";
 import Card from "../../components/Card"
-
+import useEmblaCarousel from "embla-carousel-react";
+import dummy_set from "../../assets/data_set"
 const TestPage = () => {
   const testStore = useContext(TestContext);
-
+  const [emblaRef] = useEmblaCarousel();
+  console.log(dummy_set)
   return (
     <Container>
-      <Title>요가 후기</Title>
-      <CardWrap>
-        <Card />
-      </CardWrap>
+            <Title>요가 후기</Title>
+        <div className="embla" ref={emblaRef}>
+      <div className="embla__container">
+        {
+          dummy_set.map((cardData)=>{
+            return (
+            <div className="embla__slide" >      
+            <Card  url={cardData.url} title={cardData.title} content={cardData.content} name={cardData.name} />
+            </div>
+            )
+          })
+        }
+
+      </div>
+    </div>
+
+
     </Container>
   );
 };

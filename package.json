@@ -8,6 +8,7 @@
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ -f && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
+    "embla-carousel-react": "^7.0.2",
     "gh-pages": "^4.0.0",
     "mobx": "^6.5.0",
     "mobx-react": "^7.4.0",

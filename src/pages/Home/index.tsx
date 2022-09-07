@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 
 const HomePage = () => {
+  
   return (
     <Container>
       Home
@@ -13,5 +14,5 @@ const HomePage = () => {
 export default HomePage;
 
 const Container = styled.div`
-  
+
 `;
