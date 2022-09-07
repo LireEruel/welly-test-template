@@ -14,9 +14,9 @@ const TestPage = () => {
         <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         {
-          dummy_set.map((cardData)=>{
+          dummy_set.map((cardData, index)=>{
             return (
-            <div className="embla__slide" >      
+            <div className="embla__slide" key={index} >      
             <Card  url={cardData.url} title={cardData.title} content={cardData.content} name={cardData.name} />
             </div>
             )
